@@ -20,7 +20,7 @@ if os.path.isfile("env.py"):
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -48,10 +48,12 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
     # 'allauth.socialaccount.providers.facebook',
     # 'allauth.socialaccount.providers.google',
     # 'allauth.socialaccount.providers.instagram',
     # 'allauth.socialaccount.providers.twitter',
+
 ]
 
 MIDDLEWARE = [
@@ -69,7 +71,10 @@ ROOT_URLCONF = 'eazyshopper.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -113,7 +118,7 @@ WSGI_APPLICATION = 'eazyshopper.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
