@@ -37,11 +37,18 @@
     <title>Eazy Shopper {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
+             
+    </div>
     <header class="container-fluid fixed-top">
+        <div id="delivery-banner" class="row text-center">
+            <div class="col bg-info text-black">
+                <h4 class="free-delivery-logo-font my-1">Free shipping and returns <i class="fas fa-shipping-fast"></i>{{ free_delivery_threshold }}</h4>
+            </div>               
+        </div>
       <div class="row">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h2 class="logo-font text-black my-0"><strong>Eazy</strong> Shopper</h2>
+                <h2 class="logo-font text-black my-0">EazyShopper</h2>
             </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -83,6 +90,21 @@
                 <li class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                         <div class="text-center">
+                            <div><i class="fas fa-heart fa-lg"></i></div>
+                            <p class="my-0">
+                                {% if wish_list %}
+                                    ${{ wish_list}}
+                                {% else %}
+                                    0
+                                {% endif %}
+                            </p>
+                        </div>
+                        </a>
+                    </li>
+                
+                <li class="list-inline-item">
+                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                        <div class="text-center">
                             <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                             <p class="my-0">
                                 {% if grand_total %}
@@ -105,11 +127,6 @@
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
-            </div>            
         </div>
     </header>
 
