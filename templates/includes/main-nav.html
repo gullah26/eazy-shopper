@@ -5,9 +5,9 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -33,12 +33,12 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                 <a href="{% url 'products' %}?category=women_activewear,women_essentials" class="dropdown-item">Activewear &amp; Essentials</a>
+                <a href="{% url 'products' %}?category=dresses" class="dropdown-item">Dresses</a>
                 <a href="{% url 'products' %}?category=women_jeans" class="dropdown-item">Jeans</a>
                 <a href="{% url 'products' %}?category=women_pants" class="dropdown-item">Pants</a>
                 <a href="{% url 'products' %}?category=women_shirts" class="dropdown-item">Shirts</a>
                 <a href="{% url 'products' %}?category=skirts" class="dropdown-item">Skirts</a>
                 <a href="{% url 'products' %}?category=women_shoes" class="dropdown-item">Shoes</a>
-                <a href="{% url 'products' %}?category=dresses" class="dropdown-item">Dresses</a>
                 <a href="{% url 'products' %}?category=women_shorts" class="dropdown-item">Shorts</a>
                 <a href="{% url 'products' %}?category=women_activewear,women_essentials,women_jeans,women_pants,women_shirts,women_skirts,women_shoes,dresses,women_shorts" class="dropdown-item">All Men Clothing</a>
             </div>
