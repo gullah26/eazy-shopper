@@ -42,14 +42,13 @@
     <header class="container-fluid fixed-top bg-info">
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="free-delivery-logo-font my-1">Free shipping and returns <i class="fas fa-shipping-fast"></i>{{ free_delivery_threshold }}</h4>
+                <h4 class="free-delivery-logo-font my-1">Free shipping and returns on orders over ${{ free_delivery_threshold }}! <i class="fas fa-shipping-fast"></i></h4>
             </div>               
         </div>
       <div class="row">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h2 class="logo-font text-black my-0" bg-white><strong><span class="brand">eazy</span><span class="red-o">sho</span><span
-                    class="thin">pper</span></strong></h2>
+                <h2 class="logo-font text-black my-0" bg-white><strong><span class="brand">eazy</span></strong>-<strong><span class="blue-o">shopper</span></strong></h2>
             </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -88,7 +87,7 @@
                         {% endif %}
                     </div>
                 </li>
-                <li class="list-inline-item">
+                <!-- <li class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                         <div class="text-center">
                             <div><i class="fas fa-heart fa-lg"></i></div>
@@ -100,13 +99,13 @@
                                 {% endif %}
                             </p>
                         </div>
-                        </a>
-                    </li>
+                    </a>
+                </li> -->
                 
                 <li class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                         <div class="text-center">
-                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                            <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                             <p class="my-0">
                                 {% if grand_total %}
                                     ${{ grand_total|floatformat:2 }}

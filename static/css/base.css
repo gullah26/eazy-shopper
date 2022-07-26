@@ -17,24 +17,15 @@ body {
 }
 
 .brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ba910a ; 
+    font-family: Lato;
+    color: rgb(98, 20, 20); 
 }
 
-.red-o {
-    font-size: 1.5rem;
-    color: #af0e9f;
+.blue-o {
     
+    color: blue;
 }
 
-.thin {
-    font-weight: 300;
-    font-size: 1.5rem;
-    color: #000000;
-
-}
 
 /* from Bulma */
 .icon {
