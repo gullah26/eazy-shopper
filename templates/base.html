@@ -39,7 +39,7 @@
   <body>
              
     </div>
-    <header class="container-fluid fixed-top bg-info">
+    <header class="container-fluid fixed-top bg-warning">
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
                 <h4 class="free-delivery-logo-font my-1">Free shipping and returns on orders over ${{ free_delivery_threshold }}! <i class="fas fa-shipping-fast"></i></h4>
@@ -86,22 +86,7 @@
                             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                         {% endif %}
                     </div>
-                </li>
-                <li class="list-inline-item">
-                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
-                        <div class="text-center">
-                            <div><i class="fas fa-heart fa-lg" ></i></div>
-                            <p class="my-0">
-                                {% if wish_list %}
-                                    ${{ wish_list}}
-                                {% else %}
-                                    <p>0</p>
-                                {% endif %}
-                            </p>
-                        </div>
-                    </a>
-                </li>
-                
+                </li>                
                 <li class="list-inline-item">
                     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                         <div class="text-center">
