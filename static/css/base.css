@@ -26,6 +26,7 @@ body {
     color: blue;
 }
 
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -38,6 +39,7 @@ body {
 .logo-font {
     text-transform: uppercase;
 }
+
 
 .free-delivery-logo-font {
     font-size: 1rem;

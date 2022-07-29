@@ -14,21 +14,28 @@
     {% endblock %}
 
     {% block corecss %}
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
+
         <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
         <!-- Stripe -->
         <script src="https://js.stripe.com/v3/"></script>
+
     {% endblock %}
 
     {% block extra_js %}
@@ -39,10 +46,10 @@
   <body>
              
     </div>
-    <header class="container-fluid fixed-top bg-gradient-warning bg-info">
+    <header class="container-fluid fixed-top  bg-white font-weight-bold">
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="free-delivery-logo-font my-1">Free shipping and returns on orders over ${{ free_delivery_threshold }}! <i class="fas fa-shipping-fast"></i></h4>
+                <h3 class="free-delivery-logo-font my-1">Free shipping and returns on orders over ${{ free_delivery_threshold }}! <i class="fas fa-shipping-fast"></i></i></h3>
             </div>               
         </div>
       <div class="row">
@@ -70,14 +77,17 @@
                 <li class="list-inline-item dropdown">
                     <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="text-center">
-                            <div><i class="fas fa-user fa-lg"></i></div>
-                            <p class="my-0">My Account</p>
+                            <div>
+                                <!--<i class="fas fa-user fa-lg text-black"></i>-->
+                                <i class="bi bi-person fa-2x"></i>                            
+                                <p class="my-0 text-black">My Account</p>
+                            </div>
                         </div>
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
                         {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                                <a href="" class="dropdown-item">Product Management</a>
+                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                             {% endif %}
                             <a href="" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
@@ -88,21 +98,23 @@
                     </div>
                 </li>                
                 <li class="list-inline-item">
-                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                    <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                         <div class="text-center">
-                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                            <p class="my-0">
+                            <div><i class="bi bi-bag fa-2x"></i></div>
+                            <!-- <div><i class="fas fa-shopping-bag  fa-lg "></i></div> -->
+                            
+                            <p class="my-1">
                                 {% if grand_total %}
                                     ${{ grand_total|floatformat:2 }}
                                 {% else %}
                                     $0.00
                                 {% endif %}
                               </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                        </div>
+                     </a>
+                </li>
+            </ul>
+        </div>
         </div>
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
@@ -141,6 +153,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 
     
