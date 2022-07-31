@@ -33,6 +33,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['eazyshopper.herokuapp.com', 'localhost']
 
+# CSRF_TRUSTED_ORIGINS = ['https://example.com']
+
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:8000'
+]
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8000',
+]
+
 
 # Application definition
 
@@ -60,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -174,3 +184,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
+
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
