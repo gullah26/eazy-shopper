@@ -36,11 +36,11 @@ ALLOWED_HOSTS = ['eazyshopper.herokuapp.com', 'localhost']
 # CSRF_TRUSTED_ORIGINS = ['https://example.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://localhost:8000'
+    'https://8000-gullah26-eazyshopper-udba6thla10.ws-eu54.gitpod.io/'
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:8000',
+    'https://8000-gullah26-eazyshopper-udba6thla10.ws-eu54.gitpod.io/',
 ]
 
 
@@ -70,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
