@@ -36,11 +36,11 @@ ALLOWED_HOSTS = ['eazyshopper.herokuapp.com', 'localhost']
 # CSRF_TRUSTED_ORIGINS = ['https://example.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-gullah26-eazyshopper-udba6thla10.ws-eu54.gitpod.io/'
+    'https://8000-gullah26-eazyshopper-mhh1rupaxnd.ws-eu59.gitpod.io'
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'https://8000-gullah26-eazyshopper-udba6thla10.ws-eu54.gitpod.io/',
+    'https://8000-gullah26-eazyshopper-mhh1rupaxnd.ws-eu59.gitpod.io',
 ]
 
 
@@ -195,7 +195,7 @@ if 'USE_AWS' in os.environ:
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
         'CacheControl': 'max-age=94608000',
     }
-    
+
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'eazy-shopper'
     AWS_S3_REGION_NAME = 'eu-north-1'
