@@ -1,0 +1,53 @@
+
+{% load static %}
+<!-- footer -->
+<footer class="section-footer border-top">
+	<div class="container">
+		<div class="col-12">
+			<div class="col-12">
+				<ul>
+					<li><a href="{% url 'newsletter' %}" aria-label="visit our Newsletter (opens in new tab)" rel="noopener" target="_blank"><i class="fas fa-rss"></i> Newsletter</a></li>
+					<li><a href="{% url 'contact' %}" aria-label="contact our Customer Support page (opens in new tab)" rel="noopener" target="_blank"><i class="fas fa-user-headset"></i> Customer Support</a></li>
+					<li><a href="{% url 'shipping' %}" aria-label="(opens in new tab)" rel="noopener" target="_blank">Shipping & Delivery <i class="fas fa-truck"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="col-12">
+				<ul>
+					<li><a href="https://www.twitter" aria-label="visit our twitter page (opens in new tab)" rel="noopener" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.facebook.com" aria-label="visit our facebook page (opens in new tab)" rel="noopener" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.instagram.com" aria-label="visit our instagram page (opens in new tab)" rel="noopener" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.pintrest.com" aria-label="visit our pintrest page (opens in new tab)" rel="noopener" target="_blank"><i class="fab fa-pintrest" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+			<div class="col-12">
+				<ul>
+					<li><i class="fas fa-at"></i> info@eazy-shopper.com</li>
+					<li><i class="fas fa-location"></i> Street name 123, Avanue abc</li>
+					<li><i class="fas fa-phone"></i> +123-456-7890</li>
+				</ul>
+			</div>				
+			<div class="col-12">
+				<i class="fab fa-lg fa-cc-visa fa-2x"></i>
+				<i class="fab fa-lg fa-cc-mastercard fa-2x"></i>
+			</div>
+			<div class="col-12">
+				<p class="col-12"> &copy 2022 Eazy-Shopper </p>
+			</div>
+		</div>
+		
+	</div>
+</footer>
+<!-- footer end -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.thumb a').click(function(e){
+			e.preventDefault();
+			$('.mainImage img').attr('src', $(this).attr("href"));
+		})
+	})
+</script>
+
+</body>
+</html>

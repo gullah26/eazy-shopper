@@ -14,10 +14,11 @@
     {% endblock %}
 
     {% block corecss %}
-
+        <!-- css style sheets -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      
 
 
     {% endblock %}
@@ -46,16 +47,16 @@
              
     </div>
 
-    <header class="container-fluid fixed-top  bg-white font-weight-bold">
+    <header class="container-fluid fixed-top" style="background-color: rgb(222, 213, 178);">
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h3 class="free-delivery-logo-font my-0">Free shipping and returns on orders over ${{ free_delivery_threshold }} !<i class="fas fa-shipping-fast"></i></h3>
+                 <h3 class="free-delivery-logo-font my-0">Free shipping and returns on orders over ${{ free_delivery_threshold }} !<i class="fas fa-shipping-fast"></i></h3>
             </div>               
         </div>
       <div class="row">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                <h4 class="logo-font text-black my-0" bg-white><strong><span class="brand">eazy</span></strong>-<strong><span class="blue-o">shopper</span></strong></h4>
+                <h4 class="logo-font text-black my-0"><strong><span class="brand">eazy</span></strong>-<strong><span class="blue-o">shopper</span></strong></h4>
             </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -153,37 +154,7 @@
     {% endblock %}
 
     <!-- footer -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <ul>
-                        <li><a href="#" aria-label="visit our Newsletter (opens in new tab)" rel="noopener" target="_blank">Newsletter</a></li>
-                        <li><a href="#" aria-label="contact our Customer Support page (opens in new tab)" rel="noopener" target="_blank">Customer Support</a></li>
-                        <li><a href="https://github.com/tetrapak-dev/milestone-project-4" aria-label="visit our Github page (opens in new tab)" rel="noopener" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/dennischmielewski/" aria-label="visit our LinkedIn page (opens in new tab)" rel="noopener" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.instagram.com" aria-label="visit our Instagram page (opens in new tab)" rel="noopener" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-8 text-md-center">
-                    <span  class="px-2">support@eazy-shopper.com</span>
-                    <span  class="px-2">+123-456-7890</span>
-                    <span  class="px-2">Sample Ave Project 4, Fullstack, Codeinstitute</span>
-                </div>
-                <div class="col-md-2 text-md-right text-muted">
-                    <i class="fab fa-lg fa-cc-visa"></i>
-                    <i class="fab fa-lg fa-cc-paypal"></i>
-                    <i class="fab fa-lg fa-cc-mastercard"></i>
-                </div>
-                <div class="col-md-2">
-                    <p class="text-muted"> &copy 2022 Eazy Shopper Inc </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- footer-->
+    {% include 'includes/footer.html' %}    
 
     {% block postloadjs %}
     <script type="text/javascript">

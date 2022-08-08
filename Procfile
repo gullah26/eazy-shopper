@@ -1,1 +1,1 @@
-web: gunicorn eazyshopper.wsgi
+web: gunicorn eazy-shopper.wsgi

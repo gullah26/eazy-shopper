@@ -18,12 +18,12 @@ body {
 
 .brand {
     font-family: Lato;
-    color: rgb(98, 20, 20); 
+    color: rgb(209, 20, 20); 
 }
 
 .blue-o {
     
-    color: blue;
+    color: rgb(11, 78, 40);
 }
 
 
@@ -52,7 +52,7 @@ body {
 .shop-now-button {
     background: black;
     color: white;
-    min-width: 260px;
+    min-width: 250px;
 }
 
 .btn-black {
@@ -79,7 +79,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: rgba(0, 0, 0, 0.477);
     color: white;
 }
 
@@ -101,13 +101,13 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: rgb(255, 255, 255);
 	z-index: -1;
 }
 
 a.category-badge > span.badge:hover {
     background: #212529 !important;
-    color: #fff !important;
+    color: rgb(243, 233, 233) !important;
 }
 
 .btt-button {
