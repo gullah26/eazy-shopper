@@ -294,10 +294,10 @@ ul {
 }
 
 footer {
-    margin-top: 300px;
+    margin-top: 250px;
     position: relative;
-    height: 150px;
-    background-color: #fff;
+    /* hhheight: 150px; */
+    background-color: rgb(250, 246, 246) !important;
     text-align: center;
     color: black;
 }

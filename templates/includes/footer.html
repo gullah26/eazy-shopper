@@ -1,53 +1,120 @@
-
 {% load static %}
-<!-- footer -->
-<footer class="section-footer border-top">
-	<div class="container">
-		<div class="col-12">
-			<div class="col-12">
-				<ul>
-					<li><a href="{% url 'newsletter' %}" aria-label="visit our Newsletter (opens in new tab)" rel="noopener" target="_blank"><i class="fas fa-rss"></i> Newsletter</a></li>
-					<li><a href="{% url 'contact' %}" aria-label="contact our Customer Support page (opens in new tab)" rel="noopener" target="_blank"><i class="fas fa-user-headset"></i> Customer Support</a></li>
-					<li><a href="{% url 'shipping' %}" aria-label="(opens in new tab)" rel="noopener" target="_blank">Shipping & Delivery <i class="fas fa-truck"></i></a></li>
-				</ul>
-			</div>
 
-			<div class="col-12">
-				<ul>
-					<li><a href="https://www.twitter" aria-label="visit our twitter page (opens in new tab)" rel="noopener" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.facebook.com" aria-label="visit our facebook page (opens in new tab)" rel="noopener" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.instagram.com" aria-label="visit our instagram page (opens in new tab)" rel="noopener" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-					<li><a href="https://www.pintrest.com" aria-label="visit our pintrest page (opens in new tab)" rel="noopener" target="_blank"><i class="fab fa-pintrest" aria-hidden="true"></i></a></li>
-				</ul>
-			</div>
-			<div class="col-12">
-				<ul>
-					<li><i class="fas fa-at"></i> info@eazy-shopper.com</li>
-					<li><i class="fas fa-location"></i> Street name 123, Avanue abc</li>
-					<li><i class="fas fa-phone"></i> +123-456-7890</li>
-				</ul>
-			</div>				
-			<div class="col-12">
-				<i class="fab fa-lg fa-cc-visa fa-2x"></i>
-				<i class="fab fa-lg fa-cc-mastercard fa-2x"></i>
-			</div>
-			<div class="col-12">
-				<p class="col-12"> &copy 2022 Eazy-Shopper </p>
+<!-- Footer -->
+<footer class="text-center text-lg-start text-dark" style="background-color: #e9edf0; margin-top: 250px; height: auto">
+	<!-- Section: Social media -->
+	<section class="d-flex justify-content-center p-4 text-black" style="background-color: #ffffff">
+
+		<!-- social media -->
+		<div>
+			<a href="" class="text-white me-4">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a href="" class="text-white me-4">
+				<i class="fab fa-twitter"></i>
+			</a>
+			<a href="" class="text-white me-4">
+				<i class="fab fa-pinterest"></i>
+			</a>
+			<a href="" class="text-white me-4">
+				<i class="fab fa-instagram"></i>
+			</a>
+		</div>
+		<!-- Right -->
+	</section>
+	<!-- Section: Social media -->
+
+	<!-- Section: Links  -->
+	<section class="">
+		<div class="container text-center text-md-start mt-5">
+			<!-- Grid row -->
+			<div class="row mt-3">
+				<!-- Grid column -->
+				<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+					<!-- Content -->
+					<h6 class="text-capitalize fw-bold">Newsletter</h6>
+					<hr class="mb-4 mt-0 d-inline-block mx-auto"
+						style="width: 100px; background-color: #2013dd; height: 2px" />
+					<p>
+						<a href="{% url 'newsletter' %}" aria-label="visit our Newsletter (opens in new tab)"
+							rel="noopener" target="_blank"><i class="fas fa-rss"></i> Newsletter</a>
+
+					</p>
+
+				</div>
+
+				<!-- Grid column -->
+				<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+					<h6 class="text-capitalize fw-bold">Shipping & Delivery</h6>
+					<hr class="mb-4 mt-0 d-inline-block mx-auto"
+						style="width: 100px; background-color: #2013dd; height: 2px" />
+					<p>
+						<i class="fas fa-truck"></i> We ship with
+						<a href="{% url 'shipping' %}" aria-label="(opens in new tab)" rel="noopener"
+							target="_blank">
+							<div>
+								<i class="fab  fa-ups fa-lg"></i>
+								<i class="fab  fa-dhl fa-lg"></i>
+								<i class="fab  fa-fedex fa-3x"></i>
+							</div>
+						</a>
+					</p>
+
+				</div>
+
+				<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+					
+					<h6 class="text-capitalize fw-bold">Accepted Payments</h6>
+					<hr class="mb-4 mt-0 d-inline-block mx-auto"
+						style="width: 100px; background-color: #2013dd; height: 2px" />
+
+
+					<p>
+						<a href="https://www.visa.se/" class="text-dark">
+							<i class="fab fa-lg fa-cc-visa fa-lg"></i> Visa</a>
+					</p>
+					<p>
+						<a href="https://www.mastercard.com/global/en.html" class="text-dark">
+							<i class="fab fa-lg fa-cc-mastercard fa-lg"></i> Mastercard</a>
+					</p>
+				</div>
+
+				<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+					<!-- Links -->
+					<h6 class="text-capitalize fw-bold">Contact</h6>
+					<hr class="mb-4 mt-0 d-inline-block mx-auto"
+						style="width: 100px; background-color:  #2013dd; height: 2px" />
+					<p>
+						<a href="{% url 'contact' %}" aria-label="contact our Customer Support page (opens in new tab)"
+							rel="noopener" target="_blank" ><i class="fas fa-headset"></i> Customer Support						
+						</a>
+			
+
+
+					</p>
+					<p><i class="fas fa-envelope mr-3"></i> info@eazy-shopper.com</p>
+					<p><i class="fas fa-phone mr-3"></i> + 46 123 456 7890</p>
+					<p><i class="fas fa-print mr-3"></i> + 46 123 456 7890</p>
+
+				</div>
 			</div>
 		</div>
-		
-	</div>
-</footer>
-<!-- footer end -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-	$(document).ready(function(){
-		$('.thumb a').click(function(e){
-			e.preventDefault();
-			$('.mainImage img').attr('src', $(this).attr("href"));
-		})
-	})
-</script>
+	</section>
 
-</body>
-</html>
+	<!-- Copyright -->
+	<div class="text-center p-3 text-white" style="background-color: rgba(0, 0, 0, 2)">
+		&copy 2022 Eazy-Shopper
+	</div>
+	<!-- Copyright -->
+
+	<!-- footer end -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('.thumb a').click(function (e) {
+				e.preventDefault();
+				$('.mainImage img').attr('src', $(this).attr("href"));
+			})
+		})
+	</script>
