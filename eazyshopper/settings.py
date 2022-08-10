@@ -14,6 +14,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import os
 import dj_database_url
 
+if os.path.isfile("env.py"):
+    import env
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -32,11 +35,11 @@ ALLOWED_HOSTS = ['eazyshopper.herokuapp.com', 'localhost']
 # CSRF_TRUSTED_ORIGINS = ['https://example.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-gullah26-eazyshopper-mhh1rupaxnd.ws-eu59.gitpod.io'
+    'http://localhost:8000'
 ]
 
 CORS_ORIGIN_WHITELIST = [
-    'https://8000-gullah26-eazyshopper-mhh1rupaxnd.ws-eu59.gitpod.io',
+    'http://localhost:8000',
 ]
 
 
