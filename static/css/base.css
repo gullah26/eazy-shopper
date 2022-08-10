@@ -287,6 +287,28 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+
+/*custom footer*
+
+.social-networks {
+    text-align: center;    
+    padding: 1.5em;
+    background-color: #0f118d;
+}
+
+.social-networks > li {
+    display: inline;
+}
+
+.social-networks i {
+    font-size: 2rem;
+    margin: 1%;
+    padding: 1.5em;
+    color: #ffffff;
+}
+
+/*End of custom footer*/
+
 /* Footer */
 
 ul {
