@@ -17,15 +17,16 @@
                 Men
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'products' %}?category=activewear,essentials" class="dropdown-item">Activewear &amp; Essentials</a>
-                <a href="{% url 'products' %}?category=jeans" class="dropdown-item">Jeans</a>
-                <a href="{% url 'products' %}?category=pants" class="dropdown-item">Pants</a>
-                <a href="{% url 'products' %}?category=shirts" class="dropdown-item">Shirts</a>
+                <a href="{% url 'products' %}?category=men_activewear,men_essentials" class="dropdown-item">Activewear &amp; Essentials</a>
+                <a href="{% url 'products' %}?category=men_jeans" class="dropdown-item">Jeans</a>
+                <a href="{% url 'products' %}?category=men_pants" class="dropdown-item">Pants</a>
+                <a href="{% url 'products' %}?category=men_shirts" class="dropdown-item">Shirts</a>
+                <a href="{% url 'products' %}?category=men_shorts" class="dropdown-item">Shorts</a>
                 <a href="{% url 'products' %}?category=men_shoes" class="dropdown-item">Shoes</a>
-                <a href="{% url 'products' %}?category=t_shirts" class="dropdown-item">T-shirts</a>
-                <a href="{% url 'products' %}?category=under_wear" class="dropdown-item">Underwear</a>
+                <a href="{% url 'products' %}?category=men_t_shirts" class="dropdown-item">T-shirts</a>
+                <a href="{% url 'products' %}?category=men_underwear" class="dropdown-item">Underwear</a>
                 <a href="{% url 'products' %}?category=men_hoddie" class="dropdown-item">Hoddies</a>
-                <a href="{% url 'products' %}?category=activewear,essentials,jeans,pants,shirts,shoes" class="dropdown-item">All Men Products</a>
+                <a href="{% url 'products' %}?category=men_activewear,men_essentials,men_jeans,men_pants,men_shirts,men_shoes,men_t_shirts,men_underwear,men_hoddie,men_shorts" class="dropdown-item">All Men Products</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -34,12 +35,17 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                 <a href="{% url 'products' %}?category=women_activewear,women_essentials" class="dropdown-item">Activewear &amp; Essentials</a>
-                <a href="{% url 'products' %}?category=dresses" class="dropdown-item">Dresses</a>
+                <a href="{% url 'products' %}?category=women_dresses" class="dropdown-item">Dresses</a>
                 <a href="{% url 'products' %}?category=women_jeans" class="dropdown-item">Jeans</a>
                 <a href="{% url 'products' %}?category=women_shirts" class="dropdown-item">Shirts</a>
-                <a href="{% url 'products' %}?category=skirts" class="dropdown-item">Skirts</a>
+                <a href="{% url 'products' %}?category=women_skirts" class="dropdown-item">Skirts</a>
+                <a href="{% url 'products' %}?category=women_t_shirts" class="dropdown-item">T-shirts</a>
+                <a href="{% url 'products' %}?category=women_shorts" class="dropdown-item">Shorts</a>
                 <a href="{% url 'products' %}?category=women_shoes" class="dropdown-item">Shoes</a>
-                <a href="{% url 'products' %}?category=women_activewear,women_essentials,women_jeans,women_pants,women_shirts,skirts,women_shoes,dresses,women_shorts" class="dropdown-item">All Men Clothing</a>
+                <a href="{% url 'products' %}?category=women_underwear" class="dropdown-item">Underwear</a>
+
+                <a href="{% url 'products' %}?category=women_hoddie" class="dropdown-item">Hoddie</a>
+                <a href="{% url 'products' %}?category=women_activewear,women_essentials,women_jeans,women_pants,women_shirts,women_skirts,women_shoes,women_dresses,women_shorts,women_underwear,women_hoddie" class="dropdown-item">All Men Clothing</a>
             </div>
         </li>
         <li class="nav-item dropdown">
