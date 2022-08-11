@@ -1,12 +1,12 @@
-
+# -*- coding: utf-8 -*-
 from hashlib import sha1
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
 from django.core.serializers.json import DjangoJSONEncoder
-import simplejson as json
-import jsonfield
-from products.models import Product
+from django.utils import simplejson as json
+from jsonfield.fields import JSONField
+from shop.models.productmodel import Product
 
 
 class Wishlist(models.Model):

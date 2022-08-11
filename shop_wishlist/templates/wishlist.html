@@ -1,0 +1,56 @@
+{% extends "shop/base.html" %}
+{#
+If django-shop-productvariations are not used, remove column "Group Options" and
+"Text Options" and do not load the templatetags libraries 'product_optiongroups'
+and 'product_textoptions'.
+adjust_optiongroups_price and adjust_textoptions_price then also does not make
+sense.
+#}
+{% load i18n wishlisttags product_optiongroups product_textoptions %}
+
+{% block body %}
+  <h1>{% trans "Wishlist" %}</h1>
+      <p></p><form method="get" action="{% url wishlist %}">
+      	<label for="select_wishlist">{% trans "Select wishlist" %}: </label>{% select_wishlist %}&nbsp;<button type="submit">Go</button>
+      </form></p>
+      <form method="post" action="{% url wishlist %}">
+        {% csrf_token %}
+        {{ formset.management_form }}
+        <table border="1">
+          <thead>
+            <tr>
+              <th>{% trans "Product name" %}</th>
+              <th>{% trans "Group Options" %}</th>
+              <th>{% trans "Text Options" %}</th>
+              <th>{% trans "Unit price" %}</th>
+              <th>&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for form in formset %}
+            <tr>
+              <td>{{ form.instance.product.get_name }}</td>
+              <td>{% describe_optiongroups form.instance.variation %}</td>
+              <td>{% describe_textoptions form.instance.variation %}</td>
+              <td>{{ form.instance.product.get_price|adjust_optiongroups_price:form.instance.variation|adjust_textoptions_price:form.instance.variation }}</td>
+              <td>
+              	<button type="submit" name="add_to_cart" value="{{ form.instance.id }}">{% trans "Add to cart" %}</button>
+                <button type="submit" name="remove_item" value="{{ form.instance.id }}">{% trans "Remove item" %}</button>
+			  </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </form>
+      <p><form action="{% url wishlist_rename %}" method="post">
+        {% csrf_token %}
+		<label for="name">{% trans "Rename wishlist to" %}:</label>
+		<input type="text" name="wishlist_name" value="{{ wishlist_name }}" />
+        <button type="submit">Go</button>
+      </form>
+      <form action="{% url wishlist_delete %}" method="post">
+        {% csrf_token %}
+        <button type="submit">{% trans "Delete this wishlist" %}</button>
+      </form>
+	  </p>
+{% endblock %}
