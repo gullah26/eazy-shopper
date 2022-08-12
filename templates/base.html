@@ -105,6 +105,24 @@
                             {% endif %}
                         </div>
                     </li>
+
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="{% url 'view_cart' %}">
+                            <div class="text-center">
+                                <div><i class="fas fa-heart"></i></div>
+                                <p class="my-1">
+                                    {% if total_likes %}
+                                    ${{ total_likes}}
+                                    {% else %}
+                                    0
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+
+
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_cart' %}">

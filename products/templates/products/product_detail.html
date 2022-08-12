@@ -51,9 +51,10 @@
                     <p class="mt-3">{{ product.description }}</p>
                     <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                         {% csrf_token %}
-                        <div class="form-row">
+                        <div class="form-row"> 
+                            <!-- to work on-->
                             {% with product.has_sizes as s %}
-                            {% if s %}
+                            {% if s %} 
                                 <div class="col-12">
                                     <p><strong>Size:</strong></p>
                                     <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
@@ -64,6 +65,7 @@
                                         <option value="xl">XL</option>
                                     </select>
                                 </div>
+                            
                             {% else %}
                                 <div class="col-12">
                                     <p><strong>Size:</strong></p>
@@ -110,9 +112,14 @@
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
+                                    <span class="text-capitalize">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Cart">
+                                <input type="submit" class="btn btn-black rounded-0 text-capitalize mt-5" value="Add to Cart">
+                                <input type="submit" class="btn btn-secondary rounded-0 text-capitalize mt-5" value="Add to Wishlist">
+                                <span class="icon">
+                                    <i class="fas fa-heart"></i>
+                                </span>
+                                
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
