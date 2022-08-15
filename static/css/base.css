@@ -37,7 +37,7 @@ body {
 }
 
 .logo-font {
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 
@@ -104,6 +104,23 @@ body {
 	background: rgb(255, 255, 255);
 	z-index: -1;
 }
+
+/* -----------Cart, favorite, User-----------*/
+
+
+
+.badge-notification {
+
+    background:red;
+    position:relative;
+    top: -10px;
+    right: 10px;
+    border-radius: 3rem;
+  }
+
+/*  Cart end */
+
+
 
 a.category-badge > span.badge:hover {
     background: #212529 !important;
@@ -287,34 +304,11 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-
-/*custom footer*
-
-.social-networks {
-    text-align: center;    
-    padding: 1.5em;
-    background-color: #0f118d;
-}
-
-.social-networks > li {
-    display: inline;
-}
-
-.social-networks i {
-    font-size: 2rem;
-    margin: 1%;
-    padding: 1.5em;
-    color: #ffffff;
-}
-
-/*End of custom footer*/
-
-/* Footer */
-
 ul {
     list-style: none;
 }
 
+/*footer*/
 footer {
     margin-top: 250px;
     position: relative;
@@ -349,7 +343,25 @@ footer a:hover {
     color: #333;
     text-decoration: none;
 }
+
+.footer-content {
+    display: flex; 
+    justify-content: space-between;
+    text-align: justify;
+    margin: 0;
+
+}
+
 /* end of footer */
+
+/*Media queries*/
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -366,7 +378,86 @@ footer a:hover {
     }
 }
 
-/* pad the top a bit when navbar is collapsed on mobile */
+
+/* Fix Mobile/Tablet navbar */
+@media (max-width: 992px) {
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar-toggler {
+        border: none;
+        color: #001735;
+    }
+
+    .nav-link {
+        padding: 0 .9rem;
+    }
+}
+
+/* Add additional padding to the top to drop body on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
+/* Remove padding on navbar to has all icons fit on 320px screens */
+@media (max-width: 320px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .nav-big {
+        display: none;
+    }
+
+    .home-font {
+        font-size: 25px;
+        margin-top: 30px;
+    }
+}
+
+/* Keep user account dropdown text within the screen*/
+@media (max-width: 768px) {
+    .dropdown-menu {
+        font-size: 0.7rem;
+    }
+
+    .nav-big {
+        display: none;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .dropdown-menu {
+        font-size: 0.7rem;
+    }
+
+    .nav-big {
+        display: none;
+    }
+
+}
+
+
+@media (max-width: 810px) {
+    .dropdown-menu {
+        font-size: 0.7rem;
+    }
+
+    .nav-big {
+        display: none;
+    }
+
+}
+/* Top padding for navbar collapse on mobile */
 
 
 @media (max-width: 991px) {
@@ -414,3 +505,4 @@ footer a:hover {
         padding: .25rem .5rem !important;
     }
 }
+
