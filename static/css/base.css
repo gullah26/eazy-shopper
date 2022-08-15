@@ -413,7 +413,7 @@ footer a:hover {
         padding: 0;
     }
 
-    .nav-big {
+    .main-search-bar, .user-fav-cart {
         display: none;
     }
 
@@ -429,7 +429,7 @@ footer a:hover {
         font-size: 0.7rem;
     }
 
-    .nav-big {
+    .main-search-bar, .user-fav-cart {
         display: none;
     }
 
@@ -440,10 +440,9 @@ footer a:hover {
         font-size: 0.7rem;
     }
 
-    .nav-big {
+    .main-search-bar, .user-fav-cart {
         display: none;
     }
-
 }
 
 
@@ -452,8 +451,14 @@ footer a:hover {
         font-size: 0.7rem;
     }
 
-    .nav-big {
+    .main-search-bar, .user-fav-cart {
         display: none;
+    }
+
+    .logo-font {
+        
+        text-align: center;
+        
     }
 
 }
