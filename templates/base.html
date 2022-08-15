@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
+
     {% endblock %}
 
     {% block extra_css %}
@@ -38,6 +39,8 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
+    <script src="{% static 'js/test.js'%}"></script>
+
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
 
@@ -53,13 +56,13 @@
 
     </div>
 
-    <header class="container-fluid fixed-top" style="background-color: rgb(210, 118, 26);">
+    <header class="container-fluid fixed-top bg-black">
 
         <div class="row">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h4 class="logo-font text-black my-0"><strong><span class="brand">eazy</span></strong>-<strong><span
-                                class="blue-o">shopper</span></strong></h4>
+                    <h3 class="logo-font text-white my-0"><strong><span class="brand">eazy</span></strong>-<strong><span
+                                class="blue-o">Shopper</span></strong></h3>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 main-search-bar">
@@ -80,15 +83,15 @@
 
             
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0 user-fav-cart">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0 user-fav-cart" id="test">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div>
 
-                                    <i class="far fa-user text-black"></i>
-                                    <p class="my-1 text-black font-weight-bold">My Account</p>
+                                    <i class="far fa-user text-white"></i>
+                                    <p class="my-1 text-white font-weight-bold">My Account</p>
 
                                 </div>
                             </div>
@@ -107,10 +110,10 @@
                         </div>
                     </li>
                     <li class="list-inline-item text-center">
-                        <a class="nav-link text-danger" href="{% url 'favorites' %}">
+                        <a class="nav-link text-white" href="{% url 'favorites' %}">
                                 <div class="mx-2 "><i class="fa fa-heart"></i></div>
 
-                               <p class="text-black font-weight-bold my-1">
+                               <p class="text-white font-weight-bold my-1">
                                     Favorite
                                 </p> 
                         </a>                                                  
@@ -119,12 +122,12 @@
                     </li>
 
                     <li class="list-inline-item text-center">
-                        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link pl-3 ml-3"
+                        <a class="{% if grand_total %}text-warning font-weight-bold{% else %}text-white{% endif %} nav-link pl-3 ml-3"
                             href="{% url 'view_cart' %}">
                             <div class="icon">
                                 <i class="fa fa-shopping-cart"></i>                            
                             </div>
-						<span class="badge badge-pill badge-danger badge-notification">0</span>
+						<span class="badge badge-pill badge-danger badge-notification">{{ product_count }}</span>
                             <div class="text-center">
                                 <p class="my-1">
                                     {% if grand_total %}

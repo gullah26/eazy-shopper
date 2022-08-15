@@ -23,7 +23,7 @@ body {
 
 .blue-o {
     
-    color: rgb(11, 78, 40);
+    color: rgb(255, 255, 255);
 }
 
 
@@ -105,9 +105,7 @@ body {
 	z-index: -1;
 }
 
-/* -----------Cart, favorite, User-----------*/
-
-
+/* ====Cart notification=====*/
 
 .badge-notification {
 
@@ -211,15 +209,6 @@ input[name='q']::placeholder {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
-}
-
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
 }
 
 /* Allauth form formatting */
@@ -354,7 +343,7 @@ footer a:hover {
 
 /* end of footer */
 
-/*Media queries*/
+/* ==Media Queries ==  from https://github.com/Harry-Leepz/Nourish-and-Lift*/
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -362,58 +351,60 @@ footer a:hover {
       max-width: 80%;
     }
   }
+  
+  /* Fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 164px;
+      }
+  }
+  
+  /* Fix Mobile/Tablet navbar */
+  @media (max-width: 992px) {
+      ul {
+          padding: 0;
+          margin: 0;
+      }
+  
+      .navbar-toggler {
+          border: none;
+          color: #001735;
+      }
+  
+      .nav-link {
+          padding: 0 .9rem;
+      }
+  }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
 
-    .header-container {
-        padding-top: 164px;
-    }
-}
+  
+  /* Add additional padding to the top to drop body on mobile */
+  @media (max-width: 991px) {
+      .header-container {
+          padding-top: 116px;
+      }
+  
+      body {
+          height: calc(100vh - 116px);
+      }
 
+  }
+  
+  /* Remove padding on navbar to has all icons fit on 320px screens */
+  @media (max-width: 320px) {
+      .navbar {
+          padding: 0;
+      }
 
-/* Fix Mobile/Tablet navbar */
-@media (max-width: 992px) {
-    ul {
-        padding: 0;
-        margin: 0;
-    }
-
-    .navbar-toggler {
-        border: none;
-        color: #001735;
-    }
-
-    .nav-link {
-        padding: 0 .9rem;
-    }
-}
-
-/* Add additional padding to the top to drop body on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
-}
-
-/* Remove padding on navbar to has all icons fit on 320px screens */
-@media (max-width: 320px) {
-    .navbar {
-        padding: 0;
-    }
-
-    .main-search-bar, .user-fav-cart {
+      .main-search-bar, .user-fav-cart {
         display: none;
     }
 
@@ -421,10 +412,29 @@ footer a:hover {
         font-size: 25px;
         margin-top: 30px;
     }
-}
+  }
+  
+  /* Keep user account dropdown text within the screen*/
+  @media (max-width: 768px) {
+      .dropdown-menu {
+          font-size: 0.7rem;
+      }
 
-/* Keep user account dropdown text within the screen*/
-@media (max-width: 768px) {
+      .main-search-bar, .user-fav-cart {
+        display: none;
+    }
+
+    .badge-notification {
+
+        background:red;
+        position:relative;
+        top: 15px;
+        left: 15px;
+        border-radius: 2rem;
+      }
+  }
+
+  @media (max-width: 800px) {
     .dropdown-menu {
         font-size: 0.7rem;
     }
@@ -433,16 +443,14 @@ footer a:hover {
         display: none;
     }
 
-}
+    .badge-notification {
 
-@media (max-width: 800px) {
-    .dropdown-menu {
-        font-size: 0.7rem;
-    }
-
-    .main-search-bar, .user-fav-cart {
-        display: none;
-    }
+        background:red;
+        position:relative;
+        top: 15px;
+        left: 15px;
+        border-radius: 2rem;
+      }
 }
 
 
@@ -461,9 +469,16 @@ footer a:hover {
         
     }
 
-}
-/* Top padding for navbar collapse on mobile */
+    .badge-notification {
 
+        background:red;
+        position:relative;
+        top: 12px;
+        left: 10px;
+        border-radius: 2rem;
+      }
+
+}
 
 @media (max-width: 991px) {
     .header-container {
@@ -511,3 +526,12 @@ footer a:hover {
     }
 }
 
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
