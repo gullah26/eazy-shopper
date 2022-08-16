@@ -39,8 +39,6 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
-    <script src="{% static 'js/test.js'%}"></script>
-
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
 
@@ -60,7 +58,7 @@
 
         <div class="row">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                <a href="{% url 'home' %}" class="nav-link">
                     <h3 class="logo-font text-white my-0"><strong><span class="brand">eazy</span></strong>-<strong><span
                                 class="blue-o">Shopper</span></strong></h3>
                 </a>
@@ -81,9 +79,9 @@
                 </form>
             </div>
 
-            
+
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0 user-fav-cart" id="test">
+                <ul class="list-inline list-unstyled text-center text-lg-right my-0 user-fav-cart">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -111,23 +109,23 @@
                     </li>
                     <li class="list-inline-item text-center">
                         <a class="nav-link text-white" href="{% url 'favorites' %}">
-                                <div class="mx-2 "><i class="fa fa-heart"></i></div>
+                            <div class="mx-2 "><i class="fa fa-heart"></i></div>
 
-                               <p class="text-white font-weight-bold my-1">
-                                    Favorite
-                                </p> 
-                        </a>                                                  
-                            
-                        
+                            <p class="text-white font-weight-bold my-1">
+                                Favorites
+                            </p>
+                        </a>
+
+
                     </li>
 
                     <li class="list-inline-item text-center">
                         <a class="{% if grand_total %}text-warning font-weight-bold{% else %}text-white{% endif %} nav-link pl-3 ml-3"
                             href="{% url 'view_cart' %}">
                             <div class="icon">
-                                <i class="fa fa-shopping-cart"></i>                            
+                                <i class="fa fa-shopping-cart"></i>
                             </div>
-						<span class="badge badge-pill badge-danger badge-notification">{{ product_count }}</span>
+                            <span class="badge badge-pill badge-danger badge-notification">{{ product_count }}</span>
                             <div class="text-center">
                                 <p class="my-1">
                                     {% if grand_total %}
@@ -136,7 +134,7 @@
                                     $0.00
                                     {% endif %}
                                 </p>
-            
+
                             </div>
                         </a>
                     </li>
@@ -187,6 +185,8 @@
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
+
+
     {% endblock %}
 
 

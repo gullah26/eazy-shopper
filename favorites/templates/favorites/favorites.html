@@ -11,10 +11,10 @@
 
 {% block content %}
 <!-- User favorites Page -->
-<div class="container-fluid large-container bg-white  ">
+<div class="container-fluid  bg-white fav-container ">
 	<div class="row">
 		<div class="col text-center mt-3">
-			<h1 class="font-weight-bold text-capitalize">Favorite List</h1>
+			<h1 class="font-weight-bold text-capitalize text-black">Favorite List</h1>
 			<hr class="w-50 mb-5">
 		</div>
 	</div>
@@ -22,7 +22,7 @@
 	{% for product in favorites.products.all %}
 	<div class="row justify-content-center">
 		<div class="col-12 col-md-6 col-lg-3">
-			<div class="image-container mt-5">
+			<div class="fav-image-container mt-5">
 				{% if product.image %}
 				<a href="{% url 'product_detail' product.id %}">
 					<img class="card-img-top" src="{{ product.image.url }}" alt=" {{ product.name }}">
@@ -42,19 +42,21 @@
 				<p class="small">
 					<a class="text-muted text-black font-weight-bold"
 						href="{% url 'products' %}?category={{ product.category.name }}">
-						<i class="fas fa-hashtag"></i> {{ product.category.friendly_name }}
+						{{ product.category.friendly_name }}
 					</a>
 				</p>
 				{% endif %}
 			</div>
 			<!-- Buttons -->
 			<div class="text-center">
-				<a class="btn btn-info btn-width mt-3" href="{% url 'product_detail' product.id %}">
+				<a class="btn btn-dark btn-sm mt-3" href="{% url 'product_detail' product.id %}">
 					<span class="text-capitalize font-weight-bold">Product Details</span>
 				</a>
-				<a class="btn btn-info btn-width mt-3" href="{% url 'remove_from_favorites' product.id %}">
-					<span class="text-capitalize font-weight-bold">Remove from Favorites</span>
+				<a class="btn btn-primary font-weight-bold btn-sm mt-3" href="{% url 'remove_from_favorites' product.id %}">
+					<span class="text-capitalize text-black">Remove from Favorites</span>
 				</a>
+
+
 			</div>
 		</div>
 	</div>

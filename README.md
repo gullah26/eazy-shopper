@@ -1,108 +1,219 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Eazy-Shopper #
 
-Welcome Seun Ajetomobi,
+* The shopping list manager is an application like a  shopping bot that allows the user to input data and manipulate it according to the user choices and the shopping bot outputs a result based on user choices and input.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+* The aim of this program is to help user have a proper planning with shopping list record,
+ this  shopping list app is beneficial to users in a lot of ways. 
+ First, a user will likely make an improptu decision to impulse buy a product that was never in the plan, this kind of uncontrolled urge will definitly impact the user financially, which the ripple effect can spread all the way to incur debt , it can also be a detriment to a once healthy credit score. However, having a proper planning of the items you want to buy could come in handy as it will help in avoiding over spending, and impulse buying by helping user to focus on what is really needed.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+* Secondly, the shopping list program saves user time and energy, not having a list of what to buy at the store makings shopping a headache and time consuming as wider product choices can be a distraction which can be overwhelming sometimes, but if you already have the choice of items you which to buy makes shopping very easy and less time consuming. In the same vein, having a shopping list reduces waste in the sense that when you buy things you do not really need immediatly it most times end up in the trash.
 
-## Gitpod Reminders
+* Further more, it can help in improving user memory and helps user to focus and have proper planning of things.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![title and logo screen](/images/title.png)
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## Features
+_______________________________
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+## Greeting
 
-A blue button should appear to click: _Make Public_,
+*  The first thing a user sees when the program is been executed is a display of the program title with a design.
 
-Another blue button should appear to click: _Open Browser_.
+* It asks the user to input a name which is then displayed as a greeting.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+![morning](/images/greetings2.png)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+![evening](/images/greetings.png)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
-------
 
-## Release History
+## Option Menu 
+* This is a section that shows  to the user  the options available to choose from. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* This option ranges from 1 to 7.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+* Based on user selection the program execute each task accordingly.
+	
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+![Option Menu](/images/optionmenu.png)
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Option 1: Add item to list.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* This option allow user to add items to the list.
+* It also tells the user if an item has already been added to avoid repetition.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![Option Menu 1a](/images/option1a.png)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+![Option Menu 1b](/images/option1b.png)
 
-------
 
-## FAQ about the uptime script
 
-**Why have you added this script?**
+## Option 2: View List
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+* This option displays the content of the list. 
 
-**How will this affect me?**
+* If nothing was previously added,  it displays "List is empty, try adding adding an item".
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+![Option Menu 2a](/images/option2a.png)
 
-**So….?**
+![Option Menu 2b](/images/option2b.png)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
 
-**Can I opt out?**
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Option 3: Total number of items in the list
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+* This option displays the total number of items on the list. 
 
-**Anything more?**
+* Displays "0" if the list is empty
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
 
----
+![Option Menu 3](/images/option3.png)
 
-Happy coding!
+
+## Option 4: Find items in the list
+	
+* The find item in the list option searches the list for a user specified item name, which then search and return a message if the item is found or not 
+
+
+![Option Menu 4a](/images/option4a.png)
+
+![Option Menu 4b](/images/option4b.png)
+
+
+## Option 5: Delete items from the list
+
+* The delete item from the list option also searches the list for a user specified item name, which then search and delete the item if found on the list or not.
+
+
+![Option Menu 5a](/images/option5a.png)
+
+![Option Menu 5b](/images/option5b.png)
+
+
+
+## Option 6: Empty  the list
+
+* This erase every content of the list and return it back to an empty list.
+* It prints a message based on if the list is already empty or not.
+
+![Option Menu 6a](/images/option6a.png)
+
+![Option Menu 6b](/images/option6b.png)
+
+## Option 7: Exit program
+
+* This function allows user to exit the program.
+* It gives the user an option to chose either to exit or run the program again from the beginning.
+* It also print a thank you message to the user based on the time of the day.
+
+![Option Menu 7](/images/option7a.png)
+
+## Testing
+
+* This program was properly tested using Pep8 online [Pep8](https://www.http://pep8online.com/checkresult "pep8") .
+
+* All the generated errors like "trailing white spaces and no newline at the end of file were rectified.
+
+* I confirm that all the functionality of this program works perfectly.
+
+![Footer section](/images/pep8.png)
+## Tools used
+
+## Language
+* Python
+
+## Other program used: 
+* Gitpod:
+    * Gitpod: A versatile IDE used to code the program [Gitpod](https://www.gitpod.io/ "gitpod")
+
+* Github:
+    * Github: a platform used for storing, tracking, and collaborating on software projects  [Github](https://www.github.com/ "github")
+
+* Git:
+    * Git: Used for version control.
+
+* Pep8:
+    * pep8: an online python code checker  [pep8](https://http://pep8online.com/checkresult/ "pep8")
+
+* Heroku:
+    * Heroku: used in the deployement of the program  [Heroku](https://http://heroku.com/ "Heroku")
+
+
+
+## Bugs
+* No bugs was found as at the time of deployment.
+
+
+##  User Input Validation.
+
+* User input validation
+	* The program code was written in a way that it controls any invalid user data input, It allows inputs like "Peanut butter", "Scottish- Whiskey". The error messages were controlled by use of various conditional statements.
+
+## Deployment
+
+* The program was deployed to Heroku by following this steps.
+
+* On the Heroku wesbite, create an account.
+
+* After signing in into your account click on create new app button.
+
+* Chose a unique name for the application to be deployed.
+
+* Chose a region.
+
+* Click on settings.
+
+* Navigate to Config var.
+
+* In the Key Value space we need to input PORT for KEY must be in capitals and 800 for PORT
+
+* Click add.
+
+* Click add buildpack, choose python first save changes and add nodjs must be in this order.
+
+* Navigate to the deploy tab on the menu.
+
+* Chose your choice of deployment github is the choice for this project.
+
+* Enter your github repository name and search, if found then click connect.
+
+* Chose to either deploy automatically or manually.
+
+* On this project, our choice is manual deployment, click and wait until a message appear confirming that the application was successfully deployed.
+
+* Click on view app button to run the application.
+
+
+* The Live link to the deployed program on Heroku [Shopping list](https://https://shopping-list-v01.herokuapp.com/ "shopping list manager").
+
+* The github link is  [Shopping list](https://github.com/gullah26/shopping_list "shopping list manager").
+
+## Credits
+
+* Content
+
+	* Insipiration was drawn  from  [Geek tutorials](https://www.youtube.com/watch?v=9-jazqksAnA "geek tutorials")
+
+    * Insipiration to structure the flow  [Richard](https://gist.github.com/richardbwest/d0365ebb89e89e7290e7cdb9cbc95530 "Richard")
+
+    * Some of the code to validate user data input was from [ Mrst12 ](https://github.com/Mrst12/shop-app#programmes-used "Mrst12")
+
+    The aim of the app inspiration was from [ Positive lending solution ](https://www.positivelendingsolutions.com.au/resources/information-centre/8-reasons-to-make-a-shopping-list/ "positive-lending-solution")
+
+
+    ## Acknoledgements
+
+    *  Codeinstitute , the slack community, and Codeinstitue mentor support team
