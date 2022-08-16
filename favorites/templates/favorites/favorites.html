@@ -60,19 +60,21 @@
 			</div>
 		</div>
 	</div>
+	<div style="height: 500px;" class="row mt-5"></div>
 	{% empty %}
 	<div class="row justify-content-center ">
 		<!-- No item in your Favorite "if" empty -->
 		<div class="text-center mt-3">
-			<h3 class="font-weight-bold text-capitalize">No item in your favorite list</h3>
+			<h3 class="font-weight-bold text-capitalize">Your favorite list is Empty</h3>
 			<a class="btn btn-light btn-lg mt-5 bg-black" href="{% url 'products' %}">
 				<span class="icon">
 					<i class="text-info fas fa-chevron-left"></i>
 				</span>
-				<span class="text-capitalize font-weight-bold text-info">Keep Shopping</span>
+				<span class="text-capitalize font-weight-bold text-white">Keep Shopping</span>
 			</a>
 		</div>
 	</div>
 	{% endfor %}
 </div>
+<div style="height: 500px;" class="row mt-5"></div>
 {% endblock %}
