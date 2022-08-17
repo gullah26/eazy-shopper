@@ -1,14 +1,15 @@
 # Eazy-Shopper #
 
-* The shopping list manager is an application like a  shopping bot that allows the user to input data and manipulate it according to the user choices and the shopping bot outputs a result based on user choices and input.
+* Eazy-Shopper is an e-commerce website application built to serve numerous products and services to cosumers and customers from a click away and with ease regardless of their location. the site offer varieties of products for men, women, children, bed and bath and other general home matrials.
 
-* The aim of this program is to help user have a proper planning with shopping list record,
- this  shopping list app is beneficial to users in a lot of ways. 
- First, a user will likely make an improptu decision to impulse buy a product that was never in the plan, this kind of uncontrolled urge will definitly impact the user financially, which the ripple effect can spread all the way to incur debt , it can also be a detriment to a once healthy credit score. However, having a proper planning of the items you want to buy could come in handy as it will help in avoiding over spending, and impulse buying by helping user to focus on what is really needed.
+* The aim of this website is to provide an easily accessible, sustainable and environmental friendly platform for B2B (Business to Business) and B2C(Business to Customer).
 
-* Secondly, the shopping list program saves user time and energy, not having a list of what to buy at the store makings shopping a headache and time consuming as wider product choices can be a distraction which can be overwhelming sometimes, but if you already have the choice of items you which to buy makes shopping very easy and less time consuming. In the same vein, having a shopping list reduces waste in the sense that when you buy things you do not really need immediatly it most times end up in the trash.
 
-* Further more, it can help in improving user memory and helps user to focus and have proper planning of things.
+* Secondly, the online e-commerce site saves user time and energy, not having to be physically present at a shopping location before their needs can be met. However, e-commerce applications recently changed the dynamics of online-shopping and services, as it helped in mitigating the effects and spread of the Covid-19 virus during the pandemic.  
+
+* Further more, this site creates a user friendly environment that allows customers/users/consumers to be able to find men, women and children clothing, apparels, accessories, home and kitchen equipments and materials of  their choice, select the  sizes & quantities that suite their needs, place an order online using a credit-card or debit card payments. 
+
+* A customer or a user  has the option to create a personalized profile to monitor the activities of their orders and save personal data on their personal profile.
 
 ![title and logo screen](/images/title.png)
 

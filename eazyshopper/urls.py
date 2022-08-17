@@ -29,5 +29,5 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('newsletter/', include('newsletter.urls')),
     path('shipping/', include('shipping.urls')),
-    path('favorites/', include('favorites.urls')),
+    path('favorites/', include('favorite.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
