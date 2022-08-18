@@ -29,8 +29,14 @@
 					</p>
 
 					<p>
-						<a href="#" aria-label="visit our Newsletter (opens in new tab)"
+						<a href="{% url 'subscribe' %}" aria-label="visit our Newsletter (opens in new tab)"
 							rel="noopener" target="_blank"> <button type="button" class="btn btn-black btn-sm">Subscribe</button>
+						</a>
+					</p>
+
+					<p>
+						<a href="{% url 'unsubscribe' %}" aria-label="visit our Newsletter (opens in new tab)"
+							rel="noopener" target="_blank"> <button type="button" class="btn btn-info btn-sm">Unsubscribe</button>
 						</a>
 					</p>
 				</div>

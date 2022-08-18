@@ -134,13 +134,13 @@ The Eazy-shopper website is a well structured E-commerce with well laid down pat
 
 #### Non-functional or Uncompleted Features
 
- - The newsletter app is not fully functional but the functionality of the newsletter app can be tested through manually adding the path newsletter/sign_up/ to subscribe to the newsletter and unsubscribe from the newsletter by adding the path newsletter/unsubscribe/ this works perfectly in the database. Not completed due to time constrain.
+ - The newsletter app is not fully functional but the functionality subscribe and unsubcribe  and registers on the backend.
 
  - The user profile drop down menu sometimes becomes unresponsive. all efforts to correct the issue was not successful within the limited time frame.
 
 - User singout button on the signout page sit too close to the footer, this shall be fixed
 
-- The newsletter was layout still needs to be fixed and other functionality of the app.
+- The newsletter layout still needs to be fixed and other functionality to be added same applies to the contact functionality.
 
  - Getting the favorite app to be responsive when there is an item in the list and when there are no items in the list.
 

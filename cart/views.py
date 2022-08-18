@@ -44,7 +44,7 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
-    
+
 
 def adjust_cart(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
