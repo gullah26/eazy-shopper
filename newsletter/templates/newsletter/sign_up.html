@@ -1,39 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col"></div>
-    </div>
-</div>
-{% endblock %}
-
 {% block content %}
-<!-- User Favorite page -->
-<div class="container-fluid large-container topzea">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h1 class="font-weight-bold text-capitalize">Newsletter</h1>
-            <hr class="w-50 mb-5">
-        </div>
-    </div>
-    <!-- User Favorite Items -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-lg-offset-3">
-                <h3 class="text-center text-black">Sign up for Eazyshopper newsletter</h3>
-                <form method="POST">{%csrf_token %}
-                    <div class="input-group">
-                        {{ form }}
-                        <span class="input-group-btn">
-                            <button class="btn btn-default bg-black text-white" type="submit">Subscribe</button>
-                        </span>
-                </form>
+<div class="container">
+    <div class="row mt-5 pt-5">
+        <div class="col-md-4 offset-md-4">
+            {% for message in messages %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+            {% endfor %}
+            <div class="card">
+                <div class="card-body">
+                    <h3>Subscribe to Newsletter</h3>
+                    <hr>
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input class="btn btn-info btn-block" type="submit" value="Subscribe">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-
 </div>
 {% endblock %}

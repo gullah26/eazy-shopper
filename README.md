@@ -136,6 +136,12 @@ The Eazy-shopper website is a well structured E-commerce with well laid down pat
 
  - The newsletter app is not fully functional but the functionality of the newsletter app can be tested through manually adding the path newsletter/sign_up/ to subscribe to the newsletter and unsubscribe from the newsletter by adding the path newsletter/unsubscribe/ this works perfectly in the database. Not completed due to time constrain.
 
+ - The user profile drop down menu sometimes becomes unresponsive. all efforts to correct the issue was not successful within the limited time frame.
+
+- User singout button on the signout page sit too close to the footer, this shall be fixed
+
+- The newsletter was layout still needs to be fixed and other functionality of the app.
+
  - Getting the favorite app to be responsive when there is an item in the list and when there are no items in the list.
 
  - More additional interactive functionality will be added in future
@@ -249,7 +255,9 @@ To host this website:
 
 **Code**
 - A large amount of code came from the Code Institute, Boutique Ado Project.
+
 - [Code Institute, Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1)
+
     - Boutique Ado is a walkthrough project by Code Institute, this project gave students an introduction to Django/AWS S3/Stripe/Heroku Postgres
 
 **Bootstrap**
@@ -277,6 +285,9 @@ To host this website:
 - [Youtube](https://www.youtube.com/watch?v=yZPgBThZT04&list=PL_557Q1uZ7gKYcVQtDYFvYONKtwtguF03&index=7)
 
     - A youtube learning platform was used for the functionality of the Newsletter app.
+
+**Kenbrotech**
+- [KenbroTech](https://www.youtube.com/watch?v=hWtlskOaFNI)
 
 
 
