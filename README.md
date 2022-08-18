@@ -1,14 +1,9 @@
 # **Eazy-Shopper**
-******************************************
-
 ## **Introduction** ##
-******************************************
-
 
 * Eazy-Shopper is an E-commerce website application built to serve numerous products and services to cosumers and customers from a click away and with ease regardless of their location. the site offer varieties of products for men, women, children, bed and bath and other general home matrials.
 
 * The aim of this website is to provide an easily accessible, sustainable and environmental friendly platform for B2B (Business to Business) and B2C(Business to Customer).
-
 
 * Secondly, the online E-commerce site saves user time and energy, not having to be physically present at a shopping location before their needs can be met. However, E-commerce applications recently changed the dynamics of online-shopping and services, as it helped in mitigating the effects and spread of the Covid-19 virus during the pandemic.  
 
@@ -16,10 +11,9 @@
 
 
 ## **UX**
-******************************************
 
 ### **User Stories**
-******************************************
+
 
 This E-commerce website was created, structured and designed to meet the end user goals, ranging from customer friendly user experience (UX), easy navigaton, efficient product search tool, comprehensive and easy signup and sign in process functionality.  A customer or a user  has the option to create a personalized profile to monitor the activities of their orders, shipment and save personal data like addresses, phone numbers and payment information  on their personal profile.
 
@@ -39,7 +33,6 @@ This E-commerce website was created, structured and designed to meet the end use
 
 
 #### **Registrations and User Accounts**
-**************************************
 
 - As a/an Site User I can be able to register an account with ease so that I can have an account that allows me to have a private profile.
 
@@ -53,7 +46,6 @@ This E-commerce website was created, structured and designed to meet the end use
 
 
 #### **Searching and Filtering**
-******************************
 
 - As a shopper I can be able to filter through available products so that I can identify best rated, best priced and filter products categorically.
 
@@ -66,7 +58,6 @@ This E-commerce website was created, structured and designed to meet the end use
 - As a shopper I can be able to view my searh results and what I have searched for so that I can easily see if the search product is available.
 
 #### **Purchasing and Checkout**
-*****************************
 
 - As a shopper I can be able to **choose the size and quantity of a product when making a order so that I can carefully select item size or quantity without mistake.
 
@@ -83,7 +74,6 @@ This E-commerce website was created, structured and designed to meet the end use
 - As a shopper I can be able to get an email confirmation of my order after checkout so that I can keep track my order record and purchases.
 
 #### **Admin and Store Management**.
-********************************
 
 - As a/an Store Owner** I can be able to Add, Edit/Update and Delete products/items so that I can Add new Items, Change/Edit product prices, modify product descriptions, edit images, Remove/Delete items/Products that are out of stock.
 
@@ -92,50 +82,54 @@ This E-commerce website was created, structured and designed to meet the end use
 
 
 ## **Features and Functionality**
-******************************************
+
 #### **Cart**
-******************************************
+
 
 *  Allows user to add items to their shopping basket
 
 #### **Checkout**
-******************************************
+
 
 * This handles the checkout process and payment of the website. 
 #### **Contact**
-******************************************
+
 
 * This feature allow user to contact the site support team.
 
 #### **Favorite**
-******************************************
+
 
 * This functionality allows user to add favorite items to the wishlist. 
 
 #### **Home**
-******************************************
+
 
 * This is the welcome homepage of the site it contains the hero image. 
 
 
 #### **Newsletter**
-******************************************
+
 
 * This is a feature that enables a user to subscribe and unsubscribe to the site newsletter.
 
 #### **Products**
-******************************************
 
 * This handles all the products, items logics and functionality
 
 #### **Profiles**
-******************************************
 
 * This allows the user to register by creating a profile.
 
 
 ### Design and Structure
 The Eazy-shopper website is a well structured E-commerce with well laid down pattern and functionality using a User stories, MVT (Model-View-Template) architecture based on CRUD(Create-Read-Update-Delete) functionality.
+
+### Footer
+
+- The top footer section contain a message "Fress shipping on order over 50" , the main footer area contain Newsletter, Shipping and Delivery, Accepted payment, and contact for customer support.
+
+- The final footer section contain social media links and copyright information
 
 
 #### Non-functional or Uncompleted Features
@@ -151,7 +145,7 @@ The Eazy-shopper website is a well structured E-commerce with well laid down pat
  - Integrate more available payment option like invoice checkout, Paypal checkout and adding other payment providers in the future
 
 ## **Technologies used**
-******************************************
+
 
 - [Python](https://www.python.org/) 
 
@@ -223,7 +217,6 @@ The Eazy-shopper website is a well structured E-commerce with well laid down pat
 
 
 ## **Deployment**
-*****************
 
 The Code Institiue student template was used to create this project.
 
