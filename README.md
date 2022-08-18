@@ -294,3 +294,7 @@ To host this website:
 * The Live link to the deployed website on Heroku [Eazy-Shopper](https://eazyshopper.herokuapp.com/ "Eazy-Shopper").
 
 * The github link is  [Eazy-Shopper](https://github.com/gullah26/eazy-shopper "eazy-shopper").
+
+* Admin details will be attached to the submission form.
+
+## Thank you.
