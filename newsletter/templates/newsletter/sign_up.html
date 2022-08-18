@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block page_header %}
@@ -10,44 +10,30 @@
 {% endblock %}
 
 {% block content %}
-<!-- <div class="overlay"></div>
-<div class="container">
-    <div class="row my-4">
-        <div class="col">
-            <hr>
-            <h1 class="logo-font text-black text-center">Newsletter</h1>
-            <hr>
-        </div>
-    </div>
-    
-        <form action="#" class="row flex-fill">
-            <div class="col-lg-7 my-md-2 my-2">
-                <input type="email" class="form-control px-4 border-0 text-center" id="email"
-                    placeholder="Your Email" name="email">
-            </div>
-            <div class="col-lg-5 my-md-2 my-2">
-                <button type="submit" class="btn btn-black border-0">Subscribe Now</button>
-            </div>
-        </form>
-    <div style="height: 250px;" class="row mt-5"></div>
-
-
-
-
-</div> -->
-
-<div class="container">
+<!-- User Favorite page -->
+<div class="container-fluid large-container topzea">
     <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
-            <h3 class="text-center text-black">Sign up for Eazyshopper newsletter</h3>
-            <form method="POST">{%csrf_token %}
-                <div class="input-group">
-                    {{ form }}
-                    <span class="input-group-btn">
-                        <button class="btn btn-default bg-black text-white" type="submit">Subscribe</button>
-                    </span>
-            </form>
+        <div class="col text-center mt-3">
+            <h1 class="font-weight-bold text-capitalize">Newsletter</h1>
+            <hr class="w-50 mb-5">
         </div>
     </div>
+    <!-- User Favorite Items -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-lg-offset-3">
+                <h3 class="text-center text-black">Sign up for Eazyshopper newsletter</h3>
+                <form method="POST">{%csrf_token %}
+                    <div class="input-group">
+                        {{ form }}
+                        <span class="input-group-btn">
+                            <button class="btn btn-default bg-black text-white" type="submit">Subscribe</button>
+                        </span>
+                </form>
+            </div>
+        </div>
+    </div>
+
 </div>
 {% endblock %}

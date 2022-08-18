@@ -120,10 +120,10 @@
                                 <input type="submit" class="btn btn-black rounded-0 text-capitalize mt-5"
                                     value="Add to Cart">
                                 {% if request.user.is_authenticated %}
-                                <a class="btn btn-info btn-sm mt-3" href="{% url 'add_to_favorite' product.id %}">
-                                    <span class="text-uppercase">Add to favorite</span>
-                                    <span class="icon">
-                                        <i class="fas fa-heart"></i>
+                                <a class="btn btn-info btn-sm mt-5 text-warning" href="{% url 'add_to_favorite' product.id %}">
+                                    <!-- <span class="text-uppercase"></span> -->
+                                    <span class="icon" >
+                                        <i class="fas fa-heart fa-2x"></i>
                                     </span>
                                 </a>
                                 {% endif %}

@@ -144,6 +144,8 @@ The Eazy-shopper website is a well structured E-commerce with well laid down pat
 
  - Integrate more available payment option like invoice checkout, Paypal checkout and adding other payment providers in the future
 
+ - Availability of  like button on all products
+
 ## **Technologies used**
 
 
