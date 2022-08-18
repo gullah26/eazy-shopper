@@ -208,10 +208,6 @@ The Eazy-shopper website is a well structured E-commerce with well laid down pat
 - [Stripe](https://stripe.com/)
 
 
-
-
-
-
 ## **Bugs**
 
  * Server error 500 was fixed .
