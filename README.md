@@ -213,7 +213,13 @@ The Eazy-shopper website is a well structured E-commerce with well laid down pat
 
 ## **Bugs**
 
-* No bugs was found as at the time of deployment.
+ * Server error 500 was fixed .
+
+ * Fix CSS not loading after deployment.
+
+ * server error 500 was fixed .
+
+ * Database error was fixed
 
 
 ## **Deployment**
@@ -235,8 +241,6 @@ To host this website:
 - After that I created a new app on the Heroku website by clicking the "New" button in the dashboard.
 - From within the new app I clicked on settings --> deploy --> deployment method and then selected Github to connect the app to my Github repository.
 - Lastly I added the necessary config vars for 'AWS_ACCESS_KEY_ID', 'AWS_SECRET_ACCESS_KEY', 'DATABASE_URL', 'EMAIL_HOST_PASS', 'EMAIL_HOST_USER', 'SECRET_KEY', 'STRIPE_PUBLIC_KEY', 'STRIPE_SECRET_KEY' and 'USE_AWS' in order to make the app able to run.
-
-
 
 
 ## **Credits**
