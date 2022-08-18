@@ -175,6 +175,7 @@ The Eazy-shopper website is a well structured E-commerce with well laid down pat
         - sqlparse==0.4.2
         - stripe==3.5.0
 
+- [Django](https://docs.djangoproject.com/en/3.2/)
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
@@ -203,6 +204,12 @@ The Eazy-shopper website is a well structured E-commerce with well laid down pat
 - [Gitpod](https://www.gitpod.io/)
 
 - [Code Institute Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+
+- [Stripe](https://stripe.com/)
+
+
+
+
 
 
 ## **Bugs**
