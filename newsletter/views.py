@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.shortcuts import render
 from .models import NewsletterUser
 from .forms import UserSignUpForm
@@ -9,9 +10,12 @@ def newsletter_signup(request):
     if form.is_valid():
         instance = form.save(commit=False)
         if NewsletterUser.objects.filter(email=instance.email).exists():
-            print("Email already exists")
+            messages.warning(request, 'Email already exists in database',
+                            "alert alert-warning alert-dismissible")
         else:
             instance.save()
+            messages.success(request, 'Email submitted to database',
+                            "alert alert-success alert-dismissible")
 
     context = {
         'form': form,
@@ -27,9 +31,12 @@ def newsletter_unsubscribe(request):
         instance = form.save(commit=False)
         if NewsletterUser.objects.filter(email=instance.email).exists():
             NewsletterUser.objects.filter(email=instance.email).delete()
+            messages.success(request, 'Email removed from database',
+                                "alert alert-success alert-dismissible")
 
         else:
-            print("Sorry email not found")
+            messages.warning(request, 'Email not in database',
+                             "alert alert-alert alert-dismissible")
 
     context = {
         'form': form,
