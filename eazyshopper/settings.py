@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'eazyshopper',
     'home',
     'products',
     'cart',
